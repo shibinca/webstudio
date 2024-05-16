@@ -1,16 +1,13 @@
 import { resolve } from "node:path";
 import { defineConfig } from "vite";
 import { vitePlugin as remix } from "@remix-run/dev";
-import { vercelPreset } from "@vercel/remix/vite";
+//import { vercelPreset } from "@vercel/remix/vite";
 
-const isStorybook = process.argv[1]?.includes("storybook") ?? false;
+//const isStorybook = process.argv[1]?.includes("storybook") ?? false;
 
 export default defineConfig(({ mode }) => ({
   plugins: [
-    isStorybook === false &&
-      remix({
-        presets: [vercelPreset()],
-      }),
+    remix(), 
   ],
   resolve: {
     conditions: ["webstudio", "import", "module", "browser", "default"],
