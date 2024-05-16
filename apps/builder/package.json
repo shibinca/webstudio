@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "which remix",
     "build": "remix vite:build",
-    "start": "remix-serve build/server/index.js",
+    "start": "remix-serve ./build/server/index.js",
     "start-local": "NODE_OPTIONS='-r dotenv/config' remix-serve build/server/index.js",
     "dev": "remix vite:dev",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
